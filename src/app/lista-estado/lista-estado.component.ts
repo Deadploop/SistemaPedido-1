@@ -11,9 +11,17 @@ export class ListaEstadoComponent {
 
   public emitirEstado = new EventEmitter();
 
+  public emitirSetEstado = new EventEmitter();
+
   getEstado(): string {
     this.emitirEstado.emit();
 
     return this.estadoSelecionado;
   }
+
+  setEstado(estado:string){
+    this.emitirSetEstado.emit();
+    this.estadoSelecionado = estado;
+  }
+  
 }

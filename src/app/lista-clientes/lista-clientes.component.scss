@@ -14,11 +14,10 @@
 }
 
 .flex-start {
-  margin: 8px 0;
   display: flex;
   flex: 1;
   width: 700px;
-  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .center {
@@ -30,10 +29,9 @@
   flex-direction: column;
 }
 
-.heading {
-  width: 700px;
-  padding: 16px;
-  // text-align: end;
-  background-color: rgba(166, 240, 82, 0.63);
-  border-radius: 4px;
-}
+// .heading {
+//   width: 700px;
+//   padding: 16px;
+//   text-align: center;
+//   border-radius: 4px;
+// }
