@@ -16,7 +16,11 @@
         <option selected>Selecione o produto</option>
         <option *ngFor="let produto of comboProdutos" [value]="produto.nome">{{produto.nome}}</option>
       </select>
-      <label for="nome">Produto</label>
+      <div>
+        <label for="nome">Produto</label>
+        <td><fa-icon [icon]="faLupa" class="color-green" (click)="selecaoProduto()"></fa-icon></td>
+      </div>
+      
     </div>
     <div class="form-floating mb-4">
       <input type="text" class="form-control" name="valor" id="valor" [(ngModel)]="quantidade"

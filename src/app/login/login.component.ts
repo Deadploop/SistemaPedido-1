@@ -22,7 +22,7 @@ export class LoginComponent {
       return this.router.navigateByUrl('/home');
     } else {
       // da ruim
-      return alert('deu ruim')
+      return alert('Usuário ou senha inválidos')
     }
   }
 }

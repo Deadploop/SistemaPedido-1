@@ -10,6 +10,7 @@ import { ProdutoComponent } from './produto/produto.component';
 import { ListarProdutoComponent } from './listar-produto/listar-produto.component';
 import { ListaClientesComponent } from './lista-clientes/lista-clientes.component';
 import { ListaCidadeComponent } from './lista-cidade/lista-cidade.component';
+import { SelecaoProdutoComponent } from './selecao-produto/selecao-produto.component';
 
 const routes: Routes = [
   {
@@ -65,6 +66,10 @@ const routes: Routes = [
   {
     path: "produtos/criar",
     component: ProdutoComponent
+  },
+  {
+    path: "selecaoProduto",
+    component: SelecaoProdutoComponent
   }
 
 ];

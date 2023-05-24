@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from '../produto/produto.component';
 import { Cliente } from '../cliente/cliente.component';
+import { Router } from '@angular/router';
+import { faBus, faCheese, faHome, faSearch, faTaxi, faTractor } from '@fortawesome/free-solid-svg-icons';
 
 interface Pedido {
   cliente: string;
@@ -15,6 +17,11 @@ interface Pedido {
   styleUrls: ['./pedido.component.scss']
 })
 export class PedidoComponent implements OnInit {
+
+  faLupa = faSearch; 
+
+  constructor(public router: Router) { }
+
   public cliente: string = "";
   public produto: string = "";
   public quantidade: string = "";
@@ -69,4 +76,10 @@ export class PedidoComponent implements OnInit {
 
     this.comboClientes = clientesCombos;
   }
+
+  public selecaoProduto(){
+    return this.router.navigateByUrl('/selecaoProduto');
+
+    //input group no bootstrap
+}
 }
