@@ -11,6 +11,7 @@ import { ListarProdutoComponent } from './listar-produto/listar-produto.componen
 import { ListaClientesComponent } from './lista-clientes/lista-clientes.component';
 import { ListaCidadeComponent } from './lista-cidade/lista-cidade.component';
 import { SelecaoProdutoComponent } from './selecao-produto/selecao-produto.component';
+import { SelecaoClienteComponent } from './selecao-cliente/selecao-cliente.component';
 
 const routes: Routes = [
   {
@@ -70,6 +71,10 @@ const routes: Routes = [
   {
     path: "selecaoProduto",
     component: SelecaoProdutoComponent
+  },
+  {
+    path: "selecaoCliente",
+    component: SelecaoClienteComponent
   }
 
 ];

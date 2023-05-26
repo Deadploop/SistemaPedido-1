@@ -44,4 +44,14 @@ export class ProdutoService {
 
     return this.produtos[index];
   }
+
+  registro(indice:number):any{
+    let _produto:any;
+    try{
+      this.produtos = this.getProdutosFromLocalStorage();
+      return this.produtos[indice];
+    }catch(e){
+      return _produto;
+    }
+  }
 }

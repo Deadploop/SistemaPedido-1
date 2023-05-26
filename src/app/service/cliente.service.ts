@@ -44,4 +44,14 @@ export class ClienteService {
 
     return this.clientes[index];
   }
+
+  registro(indice:number):any{
+    let _cliente:any;
+    try{
+      this.clientes = this.recuperarClientes();
+      return this.clientes[indice];
+    }catch(e){
+      return _cliente;
+    }
+  }
 }

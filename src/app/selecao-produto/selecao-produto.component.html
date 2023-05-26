@@ -1,18 +1,41 @@
 <main class="center">
-    <div class="flex-start">
-      <button class="btn btn-light btn-sm" routerLink="/produtos">Voltar</button>
+  <form>
+    <div class="input-group mb-3"> 
+      <input type="text" class="form-control" name="codigo_produto" aria-describedby="id" (blur)="carregar()" [(ngModel)]="codigo_produto">
+      <input type="text" class="form-control" name="nome_produto" aria-describedby="descrição" disabled [(ngModel)]="nome_produto"/>
+      <button class="btn btn-outline-secondary" type="button" id="pesquisar" data-bs-toggle="modal" data-bs-target="#listaPesquisaProduto"> Search 
+      </button>
     </div>
-    <form class="pequeno-container">
-      <h1 class="h3 mb-3 fw-normal">Listagem de produtos</h1>
-  
-      <div class="form-floating mb-4">
-        <input type="text" class="form-control" name="nome" id="nome">
-        <label for="nome">Nome</label>
+  </form>
+<!-- Modal -->
+  <div class="modal fade" id="listaPesquisaProduto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Selecionar Produto</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope=" col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Valor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let produto of produto_service.produtos; let i = index" (click)="setProduto(i)" class="cursor-lista-filtro">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ produto.nome }}</td>
+                <td>{{ produto.valor }}</td>
+              </tr>
+              <tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div class="form-floating mb-4">
-        <input type="text" class="form-control" name="valor" id="valor">
-        <label for="valor">Valor</label>
-      </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Cadastrar</button>
-    </form>
-  </main>
+    </div>
+  </div>
+
+</main>

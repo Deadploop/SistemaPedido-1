@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Produto } from '../produto/produto.component';
 import { Cliente } from '../cliente/cliente.component';
 import { Router } from '@angular/router';
-import { faBus, faCheese, faHome, faSearch, faTaxi, faTractor } from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 interface Pedido {
   cliente: string;
